@@ -1,0 +1,214 @@
+:root{
+    /* Paleta de colores */
+    --Fondo_de_color:rgb(6, 59, 65);
+    --Amarillo:#F8B50D;
+    --Negro:#000000;
+    --Crema:#FFFAEB;
+    --Naranja:#BD3905;
+    --Azul_marin:#0A0B43;
+
+    /* Tipogrfias */
+    --Tipo_titulares: 'IBM Plex Sans Condensed', sans-serif;
+    --Tpo_titulos_secundarios: 'Poppins', sans-serif, 600; 
+    --Tipo_textos: 'Poppins', sans-serif, 400;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--Fondo_de_color);
+    font-family: 'Poppins', sans-serif;
+}
+
+.contenedor{
+    width: 90%;
+    margin: auto;
+    
+}
+/* --------- Encabezado ------------- */
+header{
+    padding: 0px 0;
+}
+
+header .contenedor{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2em;
+    margin-left: 2.90em;
+}
+
+header .logotipo{
+    width: 100px;
+} 
+
+header nav a{
+    color: rgb(195, 195, 195);
+    text-decoration: none;
+    margin-right: 20px;
+    
+}
+header nav a:hover{
+    color: var(--Crema);
+}
+/* --------- Fin del Encabezado ------------- */
+
+/* --------- Contenido Principal ------------- */
+.contenido_principal{
+    font-size: 16px;
+    min-height: 40.62em;
+    background: linear-gradient(rgba(6, 59, 65, .50)100%, rgba(6, 59, 65, .90)0%), url(/Imagenes/Education/AdobeStock_211788768.jpeg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: end;
+}
+.contenido_principal .contenedor{
+    margin: 0 auto;
+    margin-bottom: 6.25em;
+}
+main  .Titulo_principal{
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    color: var(--Amarillo);
+    font-weight: 700;
+    font-size: 2.445em;
+    max-width: 40%;
+    margin-bottom: 0.4em;
+}
+main .texto_p{
+    font-family: 'Poppins', sans-serif;
+    color: var(--Crema);
+    font-weight: 400;
+    font-size: 1em;
+    text-align: justify;
+    line-height: 1.6em;
+    max-width: 70%;
+    margin-bottom: 1em;
+}
+main .slogan{
+    color: var(--Crema);
+    font-weight: 600;
+    font-size: 1.2em;
+}
+/* --------- Fin de Contenido Principal ------------- */
+
+/* --------- Ajustes en pantalla ------------- */
+
+@media screen and (max-width: 800px){
+    .contenido_principal{
+        font-size: 13px;
+    }
+    header .contenedor{
+        margin-top: 15px;
+    }
+    
+}
+@media screen and (max-width: 600px){
+    .contenido_principal{
+        font-size: 8px;
+    }
+    header .logotipo{
+        width: 80px;
+    }
+    header nav a{
+        font-size: 12px;
+    }
+    main .texto_p{
+        max-width: 70%;
+    }
+    header .contenedor{
+        margin-left: 35px;
+    }
+}
+@media screen and (max-width: 400px){
+    .contenido_principal{
+        font-size: 5px;
+    }
+    header .logotipo{
+        width: 60px;
+    }
+    header nav a{
+        font-size: 8px;
+    }
+    header .contenedor{
+        margin-left: 20px;
+    }
+}
+
+.contenedor_de_juegos{
+    width: 90%;
+    margin: auto;
+    color: var(--Crema);
+}
+.carrucel_lista {
+    overflow: hidden;
+    
+}
+.carrucel_contenedor{
+    position: relative;
+
+}
+.carrusel_anterior,
+.carrusel_siguiente{
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: none;
+    top: calc(50% - 35px);
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    background: none;
+    color: teal;
+    opacity: 80%;
+}
+.carrusel_anterior:hover,
+.carrusel_siguiente:hover{
+    color: var(--Crema);
+}
+.carrusel_anterior{
+    left: -30px;
+}
+.carrusel_siguiente{
+    right: -30px;
+}
+.titulo_contenedor_juego{
+    margin-bottom: 20px;
+    padding: 20px;
+}
+.caja{
+    text-align: center;
+    margin-left: 10px;
+    opacity: 50%;
+    font-size: 10px;
+}
+.caja:hover{
+    transform: scale(1.2);
+    transform-origin: center;
+    opacity: 1;
+    font-size: 13px;
+}
+.caja .imagen{
+    border-radius: 15px;
+}
+.carucel_indicador .glider-dot{
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: teal;
+    opacity: .2;
+    border-radius: 10px;
+}
+.carucel_indicador .glider-dot:hover{
+    opacity: .5;
+}
+.carucel_indicador .glider-dot.active{
+    opacity: 1;
+}
